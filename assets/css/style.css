@@ -1,0 +1,205 @@
+/* Reiniciar estilos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* CSS Global */
+body{
+    background-color: #e3e3e3;
+    
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header .btn-contato button, .hero-site button{    
+    font-size: 18px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+header .btn-contato button:hover, .hero-site button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilo do Header */
+header{
+    width: 100%;
+    padding: 40px 0;
+    /* Fazer com que o header seja transparent */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img{
+    max-width: 40px;
+}
+
+header .menu-desktop nav ul{
+    list-style-type: none;
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;  /* Uma forma de colocar os itens um ao lado do outro */
+    margin: 0 40px;
+}
+
+header .menu-desktop nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    /* Por padrão, tag a não aceitar algumas transformações em hover (por ser elemento inline). Mudamos o display para inline-block para aceitar */
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.menu-desktop nav ul li a:hover{
+    transform: scale(1.05);
+}
+
+header .btn-contato button{
+    width: 140px;
+    height: 45px;
+}
+
+/* Estilo do Hero */
+section.hero-site{
+    height: 98.5vh;
+    background-image: url('../images/pages/index/bg-inicio-site.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-site .interface{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero h1{
+    font-size: 4em;
+    font-weight: 200;
+    line-height: 60px;
+}
+
+.hero-site .txt-hero h1 span{
+    display: block;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero p{
+    font-size: 20px;
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+.hero-site .txt-hero p span{
+    display: block;
+}
+
+.hero-site button{
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+}
+
+/* Estilo das Vantagens */
+section.vantagens{
+    padding: 80px 0;
+}
+
+.vantagens .itens-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 60px;
+}
+
+.vantagens .itens-container .img-itens img{
+    max-width: 420px;
+}
+
+.vantagens .itens-container .text-itens h3{
+    font-size: 3em;
+    line-height: 50px;   
+    margin-bottom: 20px; 
+}
+
+.vantagens .itens-container .text-itens h3 span{
+    font-weight: 300;
+}
+
+/* Estilo de Contatos */
+section.contato{
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+/* Para direcionar os itens não vamos usar display 'flex'. Vamos ver outra forma */
+.txt-contato, .icons-contato{
+    display: inline-block;
+    width: 50%; /* Ao combinar as duas propriedades acima nos irmãos, acontece um 'bug' onde o navegador insere uma margem na direita de 4px. Para isso, devemos retirar essa margem: */
+    margin-right: -4px;
+    /* Agora para alinhar os dois itens na vertical -> vertical-align: middle; */
+    vertical-align: middle;
+}
+
+.contato .txt-contato h3{
+    font-size: 2.5em;    
+    line-height: 50px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contato .txt-contato h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.contato .icons-contato a{
+    text-decoration: none;
+}
+
+.contato .icons-contato button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 60%;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    padding: 0 60px;
+
+    background-color: transparent;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contato .icons-contato button i{
+    font-size: 20px;
+}
+
+.contato .icons-contato button:hover{
+    background-color: #000;
+    color: #fff;
+}
